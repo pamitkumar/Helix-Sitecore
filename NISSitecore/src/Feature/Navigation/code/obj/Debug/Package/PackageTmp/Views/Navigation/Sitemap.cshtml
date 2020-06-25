@@ -1,0 +1,5 @@
+﻿@using NISSitecore.Feature.Navigation.Repositories
+
+@*multilanguage*@
+@*@Html.Raw(XMLSitemap.GetCacheXml(new List<string>() { "en", "nl-NL" }))*@
+@Html.Raw(HTMLSitemapRepository.BuildSitemapHTML())
