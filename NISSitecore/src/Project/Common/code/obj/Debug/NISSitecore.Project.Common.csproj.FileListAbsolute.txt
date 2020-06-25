@@ -56,6 +56,8 @@ D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\NIS
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\NISSitecore.Project.Common.pdb
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Project.Common.dll
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Project.Common.pdb
+D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\Package\PackageTmp\Content\Site.css
+D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\Package\PackageTmp\Views\Common\Layouts\XMLSitemap.cshtml
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\Package\PackageTmp\Web.Debug.config
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\Package\PackageTmp\Web.Release.config
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\Package\PackageTmp\bin\roslyn\csc.exe
