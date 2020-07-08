@@ -50,6 +50,8 @@ namespace NISSitecore.Foundation.ORM.App_Start
 			// Add maps here
             // mapsConfigFactory.Add(() => new SeoMap());
         }
+
+
     }
 }
 #endregion

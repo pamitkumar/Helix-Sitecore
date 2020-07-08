@@ -48,10 +48,12 @@ namespace NISSitecore.Foundation.Content.Repositories
             return _mvcContext.GetRenderingParameters<T>();
         }
 
+       
         public bool HasDataSource => _mvcContext.HasDataSource;
 
         public Item DataSourceItem => _mvcContext.DataSourceItem;
 
         public string RenderingParameters => _mvcContext.RenderingParameters;
+        
     }
 }

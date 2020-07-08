@@ -1,7 +1,13 @@
 ﻿using Glass.Mapper.Sc;
+using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Web;
+using NISSitecore.Foundation.ORM.Models;
+using Sitecore.Data;
 using Sitecore.Data.Items;
+using Sitecore.Globalization;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace NISSitecore.Foundation.Content.Repositories
 {
@@ -60,5 +66,59 @@ namespace NISSitecore.Foundation.Content.Repositories
         }
 
         public Item ContextItem => _requestContext.ContextItem;
+
+        public IEnumerable<T> ChildrenOfType<T>(IGlassBase identifiable) where T : class
+        {
+            Guid templateId = GetTemplateIdFromConfiguration<T>();
+
+            return ChildrenOfType<T>(identifiable, templateId);
+        }       
+
+
+        public IEnumerable<T> ChildrenOfType<T>(IGlassBase identifiable, Guid templateId) where T : class
+        {
+            if (templateId == Guid.Empty)
+            {
+                throw new Exception("An invalid or empty template id was specified");
+            }
+
+            Item item = _requestContext.SitecoreService.Database.GetItem(new ID(identifiable.Id),identifiable.Language);
+            if (item == null)
+            {
+                throw new Exception("The item could not be found");
+            }
+
+            var children = item.GetChildren();
+
+            if (children == null || children.Count == 0)
+            {
+                return Enumerable.Empty<T>();
+            }
+
+            ID templateIdToFind = new ID(templateId);
+            Item[] resultant = children.Where(x => x.TemplateID == templateIdToFind).ToArray();
+
+            return GetResults<T>(resultant);
+        }
+        private IEnumerable<T> GetResults<T>(Item[] resultant) where T : class
+        {
+            return resultant.Length > 0
+                ? resultant.Select(x => _requestContext.SitecoreService.GetItem<T>(x))
+                : Enumerable.Empty<T>();
+        }
+
+        private Guid GetTemplateIdFromConfiguration<T>() where T : class
+        {
+            Type type = typeof(T);
+            SitecoreTypeConfiguration sitecoreTypeConfiguration =
+                _requestContext.SitecoreService.GlassContext.GetTypeConfigurationFromType<SitecoreTypeConfiguration>(type);
+            if (sitecoreTypeConfiguration == null)
+            {
+                throw new Exception("Glass does not know about this type");
+            }
+
+            Guid templateId = sitecoreTypeConfiguration.TemplateId.ToGuid();
+            return templateId;
+        }
     }
 }

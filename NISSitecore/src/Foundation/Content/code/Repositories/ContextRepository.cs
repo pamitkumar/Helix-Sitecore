@@ -1,8 +1,10 @@
 ﻿using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.Web;
+using NISSitecore.Foundation.ORM.Models;
 using Sitecore;
 using Sitecore.ContentSearch;
 using Sitecore.Data.Items;
+using System.Collections.Generic;
 
 namespace NISSitecore.Foundation.Content.Repositories
 {
@@ -58,7 +60,7 @@ namespace NISSitecore.Foundation.Content.Repositories
             return _requestContext.GetRootItem<T>(options);
         }
 
-
+       
         public ISearchIndex GetSearchIndexContext(Item contextItem) => ContentSearchManager.GetIndex(new SitecoreIndexableItem(contextItem));
     }
 }

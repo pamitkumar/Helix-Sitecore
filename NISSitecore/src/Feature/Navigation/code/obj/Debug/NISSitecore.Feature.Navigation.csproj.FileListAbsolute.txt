@@ -57,6 +57,9 @@ D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Navigation\code\obj\Debug
 D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Navigation\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Feature.Navigation.dll
 D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Navigation\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Feature.Navigation.pdb
 D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Navigation\code\obj\Debug\Package\PackageTmp\App_Config\Include\Feature\Feature.Navigation.SitemapXML.config
+D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Navigation\code\obj\Debug\Package\PackageTmp\App_Config\Include\Feature\Feature.Navigation.RegisterContainer.config
+D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Navigation\code\obj\Debug\Package\PackageTmp\App_Config\Include\Feature\Feature.Navigation.RegisterMappings.config
+D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Navigation\code\obj\Debug\Package\PackageTmp\Views\Navigation\PrimaryMenu.cshtml
 D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Navigation\code\obj\Debug\Package\PackageTmp\Views\Navigation\Sitemap.cshtml
 D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Navigation\code\obj\Debug\Package\PackageTmp\bin\roslyn\csc.exe
 D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Navigation\code\obj\Debug\Package\PackageTmp\bin\roslyn\csc.exe.config

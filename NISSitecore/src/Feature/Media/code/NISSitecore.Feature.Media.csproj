@@ -49,13 +49,14 @@
       <HintPath>..\..\..\..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Glass.Mapper, Version=5.6.160.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.93.Core.5.6.160\lib\net471\Glass.Mapper.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
+    <Reference Include="Glass.Mapper, Version=5.6.160.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="Glass.Mapper.Sc, Version=5.6.160.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.93.Core.5.6.160\lib\net471\Glass.Mapper.Sc.dll</HintPath>
-      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Project\Website\code\Bin\Glass.Mapper.Sc.dll</HintPath>
+    </Reference>
+    <Reference Include="Glass.Mapper.Sc.Mvc, Version=5.6.160.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.93.Mvc.5.6.160\lib\net471\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
@@ -148,9 +149,11 @@
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Mediators\CarouselMediator.cs" />
     <Compile Include="Mediators\ICarouselMediator.cs" />
+    <Compile Include="Models\BaseItem.cs" />
     <Compile Include="Models\ICarousel.cs" />
     <Compile Include="Models\ICarouselSlide.cs" />
     <Compile Include="Models\IMediaGlassBase.cs" />
+    <Compile Include="Models\IPageModel.cs" />
     <Compile Include="ORM\GlassMappings.cs" />
     <Compile Include="ORM\RegisterMappings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -159,9 +162,11 @@
     <Compile Include="ViewModels\CarouselViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Site.css" />
     <Content Include="Views\Media\Carousel.cshtml" />
     <Content Include="App_Config\Include\Feature\Feature.Media.RegisterContainer.config" />
     <Content Include="App_Config\Include\Feature\Feature.Media.RegisterMappings.config" />
+    <Content Include="Views\Media\PageBoxContent.cshtml" />
     <None Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,4 +1,5 @@
 ﻿using Glass.Mapper.Sc;
+using NISSitecore.Foundation.ORM.Models;
 using Sitecore.Data.Items;
 using System.Collections.Generic;
 
@@ -17,5 +18,7 @@ namespace NISSitecore.Foundation.Content.Repositories
         void DeleteItem(DeleteByModelOptions options);
 
         Item ContextItem { get; }
+
+        IEnumerable<T> ChildrenOfType<T>(IGlassBase iidentiable) where T : class;
     }
 }

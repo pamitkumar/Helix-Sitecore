@@ -1,0 +1,79 @@
+﻿@model NISSitecore.Feature.Navigation.Models.IListItems
+@{
+    Layout = null;
+    string isCurrentCss = string.Empty;
+    string dropdownCss = string.Empty;
+    string barColorCss = string.Empty;
+    string isCurrentCss_child = string.Empty;  
+    bool isMenuChildren = false;
+   
+}
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+
+        @foreach (NISSitecore.Feature.Navigation.Models.IList item in Model.Children)
+        {
+            if (item.ShowInNavigation == false)
+            {
+                continue;
+            }
+            isCurrentCss = string.Empty;
+            if (item.Id == Model.ActiveItemId || Model.ActiveAncestors.Exists(o => o.ID.Guid == item.Id))
+            {
+                isCurrentCss = "Active";
+            }
+
+            if (item.MenuChildren != null && item.ShowChildren==true)
+            {
+                isMenuChildren = false;
+                foreach (NISSitecore.Feature.Navigation.Models.IList child in item.MenuChildren)
+                {
+                    if (child.ShowChildren == true && child.NavigationTitle != null)
+                    {
+                        if (child.NavigationTitle.Trim().Length > 0)
+                        {
+                            isMenuChildren = true;                           
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                isMenuChildren = false;
+            }
+
+            dropdownCss=isMenuChildren == true ? "dropdown" : "";
+
+            <li class="@isCurrentCss @dropdownCss">
+                @if (isMenuChildren)
+                {
+                    <a href="@item.Url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@item.NavigationTitle</a>
+                }
+                else
+                {
+                    <a href="@item.Url">@item.NavigationTitle</a>
+                }
+                @if (item.ShowChildren == true && item.MenuChildren != null)
+                {
+                    if (isMenuChildren)
+                    {
+                        <ul class="dropdown-menu">
+                            @foreach (NISSitecore.Feature.Navigation.Models.IList child in item.MenuChildren)
+                            {
+                                if (child.ShowInNavigation == false)
+                                {
+                                    continue;
+                                }
+                                <li><a href="@child.Url">@child.NavigationTitle</a></li>
+                                <li role="separator" class="divider"></li>
+                            }
+
+                        </ul>
+                    }
+                }
+            </li>
+
+        }
+    </ul>
+</div>

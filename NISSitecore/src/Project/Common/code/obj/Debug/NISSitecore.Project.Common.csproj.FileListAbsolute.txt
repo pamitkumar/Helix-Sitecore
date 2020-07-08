@@ -50,7 +50,6 @@ D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\bin\roslyn\vb
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\bin\roslyn\vbc.rsp
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\bin\roslyn\VBCSCompiler.exe
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\bin\roslyn\VBCSCompiler.exe.config
-D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\NISSitecore.Project.Common.csprojAssemblyReference.cache
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\NISSitecore.Project.Common.csproj.CoreCompileInputs.cache
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\NISSitecore.Project.Common.dll
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\NISSitecore.Project.Common.pdb
@@ -109,3 +108,4 @@ D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\Pac
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\Package\PackageTmp\bin\roslyn\vbc.rsp
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe
 D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\Sitecore93\Website\NISSitecore\src\Project\Common\code\obj\Debug\NISSitecore.Project.Common.csprojAssemblyReference.cache
