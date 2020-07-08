@@ -3269,6 +3269,11 @@
         }
       }
     },
+    "lodash": {
+      "version": "4.17.18",
+      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.18.tgz",
+      "integrity": "sha512-au4L1q0HKcaaa37qOdpWWhwzDnB/taYJfRiKULnaT+Ml9UaBIjJ2SOJMeLtSeeLT+zUdyFMm0+ts+j4eeuUpIA=="
+    },
     "lodash._basecopy": {
       "version": "3.0.1",
       "resolved": "https://registry.npmjs.org/lodash._basecopy/-/lodash._basecopy-3.0.1.tgz",
@@ -3767,11 +3772,6 @@
             "lodash": "~4.17.12",
             "minimatch": "~3.0.2"
           }
-        },
-        "lodash": {
-          "version": "4.17.15",
-          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz",
-          "integrity": "sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A=="
         }
       }
     },
@@ -4592,11 +4592,6 @@
           "version": "3.0.0",
           "resolved": "https://registry.npmjs.org/camelcase/-/camelcase-3.0.0.tgz",
           "integrity": "sha1-MvxLn82vhF/N9+c7uXysImHwqwo="
-        },
-        "lodash": {
-          "version": "4.17.15",
-          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz",
-          "integrity": "sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A=="
         },
         "yargs": {
           "version": "7.1.0",
@@ -5599,13 +5594,6 @@
         "lodash": "^4.17.5",
         "xmldom": "^0.1.27",
         "xpath": "~0.0.27"
-      },
-      "dependencies": {
-        "lodash": {
-          "version": "4.17.15",
-          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz",
-          "integrity": "sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A=="
-        }
       }
     },
     "xpath": {
