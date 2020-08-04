@@ -1,0 +1,6 @@
+idbbankdev
+
+reCaptchtype v3
+
+Site Key: 6LeJYboZAAAAAK9uAKPTtb4jugVVXTBvcGFPpPEW
+Secret Key: 6LeJYboZAAAAALp11GfR_pMSqTOV3dp8B5tltm7p
