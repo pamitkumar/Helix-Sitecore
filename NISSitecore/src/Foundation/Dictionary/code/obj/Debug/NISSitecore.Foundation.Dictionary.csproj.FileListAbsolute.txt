@@ -50,10 +50,10 @@ D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Dictionary\code\bin\ro
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Dictionary\code\bin\roslyn\vbc.rsp
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Dictionary\code\bin\roslyn\VBCSCompiler.exe
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Dictionary\code\bin\roslyn\VBCSCompiler.exe.config
-D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Dictionary\code\obj\Debug\NISSitecore.Foundation.Dictionary.csprojAssemblyReference.cache
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Dictionary\code\obj\Debug\NISSitecore.Foundation.Dictionary.csproj.CoreCompileInputs.cache
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Dictionary\code\obj\Debug\NISSitecore.Foundation.Dictionary.dll
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Dictionary\code\obj\Debug\NISSitecore.Foundation.Dictionary.pdb
+D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Dictionary\code\obj\Debug\NISSitecore.Foundation.Dictionary.csprojAssemblyReference.cache
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Dictionary\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Foundation.Dictionary.dll
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Dictionary\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Foundation.Dictionary.pdb
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Dictionary\code\obj\Debug\Package\PackageTmp\bin\roslyn\csc.exe

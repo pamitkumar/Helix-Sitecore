@@ -46,6 +46,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sitecore.ExperienceForms">
+      <HintPath>..\..\..\..\packages\Sitecore.ExperienceForms.NoReferences.9.0.180604\lib\NET462\Sitecore.ExperienceForms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\..\..\..\packages\Sitecore.Kernel.9.3.0\lib\net471\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
@@ -54,7 +58,16 @@
       <HintPath>C:\inetpub\wwwroot\sc93sc.dev.local\bin\Sitecore.Mvc.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Sitecore.Mvc.Analytics">
+      <HintPath>C:\inetpub\wwwroot\sc93sc.dev.local\bin\Sitecore.Mvc.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
@@ -63,6 +76,11 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\inetpub\wwwroot\sc93sc.dev.local\bin\System.Web.Mvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -83,10 +101,6 @@
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>False</Private>
       <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>False</Private>
-      <HintPath>..\..\..\..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Optimization">
       <HintPath>..\..\..\..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
@@ -133,6 +147,11 @@
   <ItemGroup>
     <Content Include="Content\Site.css" />
     <Content Include="Views\Common\Layouts\XMLSitemap.cshtml" />
+    <Content Include="Views\Common\Layouts\ExperienceLayout.cshtml" />
+    <Content Include="Views\Common\Sublayouts\Section.cshtml" />
+    <Content Include="Views\Common\Sublayouts\Column1.cshtml" />
+    <Content Include="Views\Common\Layouts\MVCLayout.cshtml" />
+    <Content Include="Views\Common\Layouts\MvcOuterLayout.cshtml" />
     <None Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -147,6 +166,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\SitecoreExtensions\code\NISSitecore.Foundation.SitecoreExtensions.csproj">
+      <Project>{3f1e0789-391f-4c8b-ad70-3977162d4f52}</Project>
+      <Name>NISSitecore.Foundation.SitecoreExtensions</Name>
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

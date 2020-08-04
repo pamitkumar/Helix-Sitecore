@@ -142,6 +142,7 @@
   <ItemGroup>
     <Compile Include="Extensions\ArgsExtensions.cs" />
     <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\ItemExtensions.cs" />
     <Compile Include="Extensions\MediaItemExtensions.cs" />
     <Compile Include="Extensions\NameValueCollectionExtensions.cs" />

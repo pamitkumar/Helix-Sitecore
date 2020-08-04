@@ -50,10 +50,10 @@ D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Abstractions\code\bin\
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Abstractions\code\bin\roslyn\vbc.rsp
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Abstractions\code\bin\roslyn\VBCSCompiler.exe
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Abstractions\code\bin\roslyn\VBCSCompiler.exe.config
-D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Abstractions\code\obj\Debug\NISSitecore.Foundation.Abstractions.csprojAssemblyReference.cache
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Abstractions\code\obj\Debug\NISSitecore.Foundation.Abstractions.csproj.CoreCompileInputs.cache
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Abstractions\code\obj\Debug\NISSitecore.Foundation.Abstractions.dll
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Abstractions\code\obj\Debug\NISSitecore.Foundation.Abstractions.pdb
+D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Abstractions\code\obj\Debug\NISSitecore.Foundation.Abstractions.csprojAssemblyReference.cache
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Abstractions\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Foundation.Abstractions.dll
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Abstractions\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Foundation.Abstractions.pdb
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Abstractions\code\obj\Debug\Package\PackageTmp\bin\roslyn\csc.exe
