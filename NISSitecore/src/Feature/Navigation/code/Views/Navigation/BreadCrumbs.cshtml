@@ -1,0 +1,47 @@
+﻿@model NISSitecore.Feature.Navigation.ViewModels.BreadcrumbsViewModel
+<style>
+
+    .breadcrumbs {
+        padding-top: 31px;
+        padding-bottom: 0px;
+        overflow: hidden;
+        font-size: 14px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 1.1;
+        list-style: none;
+    }
+
+        .breadcrumbs > li {
+            display: inline;
+        }
+
+            .breadcrumbs > li + li:before {
+                content: '/';
+                margin: 0 5px 0 3px;
+            }
+
+        .breadcrumbs li:first-child:before {
+            content: "";
+        }
+</style>
+
+@if (Model.HideBreadcrumb == false)
+{
+    int index = 0;
+    <ul class="breadcrumbs">
+
+        @foreach (NISSitecore.Feature.Navigation.Models.IList el in Model.Trail)
+        {
+            if (index < Model.Trail.Count - 1)
+            {
+                <li><a href="@el.Url">@el.NavigationTitle</a></li>
+            }
+            else
+            {
+                <li>@el.NavigationTitle</li>
+            }
+            index++;
+        }
+    </ul>
+}
