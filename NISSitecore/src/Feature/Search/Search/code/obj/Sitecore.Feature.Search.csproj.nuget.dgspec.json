@@ -1,0 +1,830 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\projects\\Habitat\\src\\feature\\Search\\code\\Sitecore.Feature.Search.csproj": {}
+  },
+  "projects": {
+    "C:\\projects\\Habitat\\src\\feature\\Search\\code\\Sitecore.Feature.Search.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\Habitat\\src\\feature\\Search\\code\\Sitecore.Feature.Search.csproj",
+        "projectName": "Sitecore.Feature.Search",
+        "projectPath": "C:\\projects\\Habitat\\src\\feature\\Search\\code\\Sitecore.Feature.Search.csproj",
+        "packagesPath": "C:\\Users\\amitkumarp\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\Habitat\\src\\feature\\Search\\code\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\projects\\Habitat\\NuGet.Config",
+          "C:\\Users\\amitkumarp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net471"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sitecore.myget.org/F/sc-packages/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net471": {
+            "projectReferences": {
+              "C:\\projects\\Habitat\\src\\Foundation\\DependencyInjection\\code\\Sitecore.Foundation.DependencyInjection.csproj": {
+                "projectPath": "C:\\projects\\Habitat\\src\\Foundation\\DependencyInjection\\code\\Sitecore.Foundation.DependencyInjection.csproj"
+              },
+              "C:\\projects\\Habitat\\src\\Foundation\\Dictionary\\code\\Sitecore.Foundation.Dictionary.csproj": {
+                "projectPath": "C:\\projects\\Habitat\\src\\Foundation\\Dictionary\\code\\Sitecore.Foundation.Dictionary.csproj"
+              },
+              "C:\\projects\\Habitat\\src\\foundation\\Indexing\\code\\Sitecore.Foundation.Indexing.csproj": {
+                "projectPath": "C:\\projects\\Habitat\\src\\foundation\\Indexing\\code\\Sitecore.Foundation.Indexing.csproj"
+              },
+              "C:\\projects\\Habitat\\src\\foundation\\SitecoreExtensions\\code\\Sitecore.Foundation.SitecoreExtensions.csproj": {
+                "projectPath": "C:\\projects\\Habitat\\src\\foundation\\SitecoreExtensions\\code\\Sitecore.Foundation.SitecoreExtensions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "noWarn": [
+            "NU1603"
+          ]
+        }
+      },
+      "frameworks": {
+        "net471": {
+          "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.4, )"
+            },
+            "Microsoft.AspNet.Razor": {
+              "target": "Package",
+              "version": "[3.2.4, )"
+            },
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.2.4, )"
+            },
+            "Microsoft.CodeDom.Providers.DotNetCompilerPlatform": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.Net.Compilers": {
+              "target": "Package",
+              "version": "[1.3.2, )"
+            },
+            "Microsoft.Web.Infrastructure": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "SharpZipLib": {
+              "target": "Package",
+              "version": "[0.86.0, )"
+            },
+            "Sitecore.Analytics": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Buckets": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Kernel": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Mvc": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Collections.Concurrent": {
+              "target": "Package",
+              "version": "[4.0.12, )"
+            },
+            "System.ComponentModel": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "System.Diagnostics.Debug": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Globalization": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Linq.Expressions": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Reflection": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Resources.ResourceManager": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "System.Runtime.Extensions": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Threading": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Threading.Tasks": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\projects\\Habitat\\src\\Foundation\\DependencyInjection\\code\\Sitecore.Foundation.DependencyInjection.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\Habitat\\src\\Foundation\\DependencyInjection\\code\\Sitecore.Foundation.DependencyInjection.csproj",
+        "projectName": "Sitecore.Foundation.DependencyInjection",
+        "projectPath": "C:\\projects\\Habitat\\src\\Foundation\\DependencyInjection\\code\\Sitecore.Foundation.DependencyInjection.csproj",
+        "packagesPath": "C:\\Users\\amitkumarp\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\Habitat\\src\\Foundation\\DependencyInjection\\code\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\projects\\Habitat\\NuGet.Config",
+          "C:\\Users\\amitkumarp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net471"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sitecore.myget.org/F/sc-packages/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net471": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1603"
+          ]
+        }
+      },
+      "frameworks": {
+        "net471": {
+          "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.4, )"
+            },
+            "Microsoft.AspNet.Razor": {
+              "target": "Package",
+              "version": "[3.2.4, )"
+            },
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.2.4, )"
+            },
+            "Microsoft.CodeDom.Providers.DotNetCompilerPlatform": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.Net.Compilers": {
+              "target": "Package",
+              "version": "[1.3.2, )"
+            },
+            "Microsoft.Web.Infrastructure": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "Sitecore.Kernel": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Collections.Concurrent": {
+              "target": "Package",
+              "version": "[4.0.12, )"
+            },
+            "System.ComponentModel": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "System.Diagnostics.Debug": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Globalization": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Linq.Expressions": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Reflection": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Resources.ResourceManager": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "System.Runtime.Extensions": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Threading": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Threading.Tasks": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\projects\\Habitat\\src\\Foundation\\Dictionary\\code\\Sitecore.Foundation.Dictionary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\Habitat\\src\\Foundation\\Dictionary\\code\\Sitecore.Foundation.Dictionary.csproj",
+        "projectName": "Sitecore.Foundation.Dictionary",
+        "projectPath": "C:\\projects\\Habitat\\src\\Foundation\\Dictionary\\code\\Sitecore.Foundation.Dictionary.csproj",
+        "packagesPath": "C:\\Users\\amitkumarp\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\Habitat\\src\\Foundation\\Dictionary\\code\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\projects\\Habitat\\NuGet.Config",
+          "C:\\Users\\amitkumarp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net471"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sitecore.myget.org/F/sc-packages/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net471": {
+            "projectReferences": {
+              "C:\\projects\\Habitat\\src\\foundation\\SitecoreExtensions\\code\\Sitecore.Foundation.SitecoreExtensions.csproj": {
+                "projectPath": "C:\\projects\\Habitat\\src\\foundation\\SitecoreExtensions\\code\\Sitecore.Foundation.SitecoreExtensions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "noWarn": [
+            "NU1603"
+          ]
+        }
+      },
+      "frameworks": {
+        "net471": {
+          "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.4, )"
+            },
+            "Microsoft.AspNet.Razor": {
+              "target": "Package",
+              "version": "[3.2.4, )"
+            },
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.2.4, )"
+            },
+            "Microsoft.CodeDom.Providers.DotNetCompilerPlatform": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.Net.Compilers": {
+              "target": "Package",
+              "version": "[1.3.2, )"
+            },
+            "Microsoft.Web.Infrastructure": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "Sitecore.Kernel": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Mvc": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "System.ComponentModel": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "System.Diagnostics.Debug": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Globalization": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Linq.Expressions": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Reflection": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Resources.ResourceManager": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\projects\\Habitat\\src\\foundation\\Indexing\\code\\Sitecore.Foundation.Indexing.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\Habitat\\src\\foundation\\Indexing\\code\\Sitecore.Foundation.Indexing.csproj",
+        "projectName": "Sitecore.Foundation.Indexing",
+        "projectPath": "C:\\projects\\Habitat\\src\\foundation\\Indexing\\code\\Sitecore.Foundation.Indexing.csproj",
+        "packagesPath": "C:\\Users\\amitkumarp\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\Habitat\\src\\foundation\\Indexing\\code\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\projects\\Habitat\\NuGet.Config",
+          "C:\\Users\\amitkumarp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net471"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sitecore.myget.org/F/sc-packages/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net471": {
+            "projectReferences": {
+              "C:\\projects\\Habitat\\src\\Foundation\\DependencyInjection\\code\\Sitecore.Foundation.DependencyInjection.csproj": {
+                "projectPath": "C:\\projects\\Habitat\\src\\Foundation\\DependencyInjection\\code\\Sitecore.Foundation.DependencyInjection.csproj"
+              },
+              "C:\\projects\\Habitat\\src\\Foundation\\Dictionary\\code\\Sitecore.Foundation.Dictionary.csproj": {
+                "projectPath": "C:\\projects\\Habitat\\src\\Foundation\\Dictionary\\code\\Sitecore.Foundation.Dictionary.csproj"
+              },
+              "C:\\projects\\Habitat\\src\\foundation\\SitecoreExtensions\\code\\Sitecore.Foundation.SitecoreExtensions.csproj": {
+                "projectPath": "C:\\projects\\Habitat\\src\\foundation\\SitecoreExtensions\\code\\Sitecore.Foundation.SitecoreExtensions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "noWarn": [
+            "NU1603"
+          ]
+        }
+      },
+      "frameworks": {
+        "net471": {
+          "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.4, )"
+            },
+            "Microsoft.AspNet.Razor": {
+              "target": "Package",
+              "version": "[3.2.4, )"
+            },
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.2.4, )"
+            },
+            "Microsoft.CodeDom.Providers.DotNetCompilerPlatform": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.Net.Compilers": {
+              "target": "Package",
+              "version": "[1.3.2, )"
+            },
+            "Microsoft.Web.Infrastructure": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "Sitecore.ContentSearch": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.ContentSearch.Linq": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Kernel": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Mvc": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Collections.Concurrent": {
+              "target": "Package",
+              "version": "[4.0.12, )"
+            },
+            "System.ComponentModel": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "System.Diagnostics.Debug": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Globalization": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Linq.Expressions": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Reflection": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Resources.ResourceManager": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "System.Runtime.Extensions": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Threading": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Threading.Tasks": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\projects\\Habitat\\src\\foundation\\SitecoreExtensions\\code\\Sitecore.Foundation.SitecoreExtensions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\Habitat\\src\\foundation\\SitecoreExtensions\\code\\Sitecore.Foundation.SitecoreExtensions.csproj",
+        "projectName": "Sitecore.Foundation.SitecoreExtensions",
+        "projectPath": "C:\\projects\\Habitat\\src\\foundation\\SitecoreExtensions\\code\\Sitecore.Foundation.SitecoreExtensions.csproj",
+        "packagesPath": "C:\\Users\\amitkumarp\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\Habitat\\src\\foundation\\SitecoreExtensions\\code\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\projects\\Habitat\\NuGet.Config",
+          "C:\\Users\\amitkumarp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net471"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sitecore.myget.org/F/sc-packages/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net471": {
+            "projectReferences": {
+              "C:\\projects\\Habitat\\src\\Foundation\\DependencyInjection\\code\\Sitecore.Foundation.DependencyInjection.csproj": {
+                "projectPath": "C:\\projects\\Habitat\\src\\Foundation\\DependencyInjection\\code\\Sitecore.Foundation.DependencyInjection.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "noWarn": [
+            "NU1603"
+          ]
+        }
+      },
+      "frameworks": {
+        "net471": {
+          "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.4, )"
+            },
+            "Microsoft.AspNet.Razor": {
+              "target": "Package",
+              "version": "[3.2.4, )"
+            },
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.2.4, )"
+            },
+            "Microsoft.CodeDom.Providers.DotNetCompilerPlatform": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.Net.Compilers": {
+              "target": "Package",
+              "version": "[1.3.2, )"
+            },
+            "Microsoft.Web.Infrastructure": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "Sitecore.Analytics": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Analytics.Core": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Analytics.Model": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Analytics.XConnect": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.ContentSearch": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.ContentSearch.Linq": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.ExperienceEditor": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Kernel": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Marketing": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Marketing.Core": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Marketing.Search": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Marketing.Taxonomy": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Mvc": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "Sitecore.Xdb.Configuration": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Collections.Concurrent": {
+              "target": "Package",
+              "version": "[4.0.12, )"
+            },
+            "System.ComponentModel": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "System.Diagnostics.Debug": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Globalization": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Linq.Expressions": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Reflection": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Resources.ResourceManager": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "System.Runtime": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Runtime.Extensions": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Runtime.InteropServices": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Threading": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            },
+            "System.Threading.Tasks": {
+              "target": "Package",
+              "version": "[4.0.11, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
