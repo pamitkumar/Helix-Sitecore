@@ -27,10 +27,12 @@
         <ol>
             @foreach (PageContentResultItem result in Model.SearchResults)
             {
+                var item = Sitecore.Context.Database.GetItem(result.ItemId);
+                var itemURL = item !=null?Sitecore.Links.LinkManager.GetItemUrl(item):"#";
                 <li style="margin: 0px 0px 20px; padding: 10px; border:solid 1px #eee">
-                    <strong>@result.Title</strong><br />
+                    <strong><a href="@itemURL">@result.Title</a></strong><br />
                     @(result.Description != null && result.Description.Length >= 100 ? result.Description.Substring(0, 100) + "..." : result.Description + "...")<br />
-                    <i>@result.Id</i>
+                    @*<i>@result.CustomContent</i>*@
                 </li>
             }
         </ol>

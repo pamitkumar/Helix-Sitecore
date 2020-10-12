@@ -189,6 +189,10 @@
     <Content Include="Views\Search\SearchResults.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Abstractions\code\NISSitecore.Foundation.Abstractions.csproj">
+      <Project>{7AE2C13E-D5B3-4C79-90B1-90B091655EA2}</Project>
+      <Name>NISSitecore.Foundation.Abstractions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Search\code\NISSitecore.Foundation.Search.csproj">
       <Project>{A3C8557E-5F2F-47DC-9024-024D0A9EBB3D}</Project>
       <Name>NISSitecore.Foundation.Search</Name>

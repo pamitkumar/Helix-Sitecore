@@ -54,8 +54,16 @@ D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\obj\Debug\
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\obj\Debug\NISSitecore.Foundation.Search.csproj.CoreCompileInputs.cache
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\obj\Debug\NISSitecore.Foundation.Search.dll
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\obj\Debug\NISSitecore.Foundation.Search.pdb
+D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\bin\NISSitecore.Foundation.SitecoreExtensions.dll
+D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\bin\NISSitecore.Foundation.SitecoreExtensions.pdb
+D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\bin\NISSitecore.Foundation.SitecoreExtensions.dll.config
+D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\obj\Debug\NISSitecore.Foundation.Search.csproj.CopyComplete
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Foundation.Search.dll
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Foundation.Search.pdb
+D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\obj\Debug\Package\PackageTmp\App_Config\Include\Foundation\Foundation.Search.config
+D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Foundation.SitecoreExtensions.dll
+D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Foundation.SitecoreExtensions.pdb
+D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Foundation.SitecoreExtensions.dll.config
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\obj\Debug\Package\PackageTmp\bin\roslyn\csc.exe
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\obj\Debug\Package\PackageTmp\bin\roslyn\csc.exe.config
 D:\Projects\Sitecore93\Website\NISSitecore\src\Foundation\Search\code\obj\Debug\Package\PackageTmp\bin\roslyn\csc.rsp

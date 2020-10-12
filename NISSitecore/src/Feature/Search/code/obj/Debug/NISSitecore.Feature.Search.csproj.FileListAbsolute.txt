@@ -116,3 +116,9 @@ D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Search\code\obj\Debug\Pac
 D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Search\code\obj\Debug\Package\PackageTmp\bin\roslyn\vbc.rsp
 D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Search\code\obj\Debug\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe
 D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Search\code\obj\Debug\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Search\code\bin\NISSitecore.Foundation.Abstractions.dll
+D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Search\code\bin\NISSitecore.Foundation.Abstractions.pdb
+D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Search\code\bin\NISSitecore.Foundation.Abstractions.dll.config
+D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Search\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Foundation.Abstractions.dll
+D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Search\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Foundation.Abstractions.pdb
+D:\Projects\Sitecore93\Website\NISSitecore\src\Feature\Search\code\obj\Debug\Package\PackageTmp\bin\NISSitecore.Foundation.Abstractions.dll.config

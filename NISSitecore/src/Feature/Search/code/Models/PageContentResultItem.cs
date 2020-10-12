@@ -15,10 +15,10 @@ namespace NISSitecore.Feature.Search.Models
         [IndexField("summary_t")]
         public virtual string Description { get; set; }
 
-        //[IndexField("summary_t")]
-        //public virtual string ArticleType { get; set; }
+        [IndexField("customcontent")]
+        public virtual string CustomContent { get; set; }
 
-        //[IndexField("display_date_tdt")]
-        //public virtual DateTime DisplayDate { get; set; }
+        [IndexField("includeinsearchresults_b")]
+        public virtual bool IncludeInSearchResults { get; set; }
     }
 }

@@ -68,6 +68,11 @@ namespace NISSitecore.Foundation.Search.Services
             // Base Filters: do NOT return standard values items.
             filters.Add(!new SolrQueryByField("_name", Sitecore.Constants.StandardValuesItemName));
 
+            //Do not include if includeinsearchresults value is false.
+            filters.Add(!new SolrQueryByField("includeinsearchresults_b", "false"));
+
+            //filters.Add(new SolrQueryByField("customcontent_t", q));           
+
             // Filters: Locations.
             SolrMultipleCriteriaQuery locationsQuery = BuildMultipleCriteriaQuery(query.Locations, "_path");
             if (locationsQuery != null)
@@ -75,6 +80,7 @@ namespace NISSitecore.Foundation.Search.Services
                 filters.Add(locationsQuery);
             }
 
+            
             // Filters: Templates.
             SolrMultipleCriteriaQuery templateQuery = BuildMultipleCriteriaQuery(query.Templates, "_template");
             if (templateQuery != null)
@@ -284,6 +290,8 @@ namespace NISSitecore.Foundation.Search.Services
                 extraParams.Add(new KeyValuePair<string, string>("hl.snippets", query.HighlightSnippets.ToString()));
             }
 
+            
+
             // Execute the Solr query.
             using (IProviderSearchContext ctx = BuildSearchIndex(query).CreateSearchContext())
             {
@@ -428,6 +436,15 @@ namespace NISSitecore.Foundation.Search.Services
                     yield return string.Concat(item.Key, "^", item.Value);
                 }
             }
+        }
+
+        protected virtual SolrMultipleCriteriaQuery BuildCustomQuery(string fieldName, string fieldValue, string oper = "AND")
+        {
+            var queries = new List<ISolrQuery>();
+
+            queries.Add(new SolrQueryByField(fieldName, fieldValue));           
+
+            return new SolrMultipleCriteriaQuery(queries, oper);
         }
 
         /// <summary>

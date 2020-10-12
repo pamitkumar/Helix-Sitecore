@@ -164,6 +164,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\Fields\ContentField.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\FieldRendererService.cs" />
     <Compile Include="Services\IDBSearchBase.cs" />
@@ -171,6 +172,7 @@
     <Compile Include="Services\SitecoreFieldAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\Foundation\Foundation.Search.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +180,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SitecoreExtensions\code\NISSitecore.Foundation.SitecoreExtensions.csproj">
+      <Project>{3f1e0789-391f-4c8b-ad70-3977162d4f52}</Project>
+      <Name>NISSitecore.Foundation.SitecoreExtensions</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -3,6 +3,7 @@ using NISSitecore.Feature.Search.Repository;
 using NISSitecore.Foundation.Search.Services;
 using PagedList;
 using Sitecore;
+using Sitecore.ContentSearch.Linq.Utilities;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Mvc.Controllers;
@@ -59,6 +60,8 @@ namespace NISSitecore.Feature.Search.Controllers
 
                 // Execute the search.
                 model.SearchResults = _searchService.Search(q, query, startRow, facetValue: facet);
+
+                
             }
 
             // Page the results.
