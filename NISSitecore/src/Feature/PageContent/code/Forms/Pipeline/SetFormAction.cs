@@ -37,8 +37,8 @@ namespace NISSitecore.Feature.PageContent.Forms.Pipeline
 			if (string.IsNullOrEmpty(customAction))
 				return;
 			// Add CustomId to Attributes if not already there
-			if (!args.Attributes.ContainsKey("customAction"))
-				args.Attributes.Add("customAction", customAction);
+			//if (!args.Attributes.ContainsKey("customAction"))
+			//	args.Attributes.Add("customAction", customAction);
 			// Setup custom form ID
 			//args.FormHtmlId = customId;
 			if (args.Attributes.ContainsKey("action"))

@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using NISSitecore.Feature.PageContent.Forms.Uitlity;
 using Sitecore.Diagnostics;
 using Sitecore.ExperienceForms.Models;
 using Sitecore.ExperienceForms.Processing;
@@ -31,6 +32,18 @@ namespace NISSitecore.Feature.PageContent.Forms
            
             if (!formSubmitContext.HasErrors)
             {
+                var firstName = Helper.GetValue(Helper.GetFieldByName("First Name", formSubmitContext.Fields));
+                var lastName = Helper.GetValue(Helper.GetFieldByName("Last Name", formSubmitContext.Fields));
+                var email = Helper.GetValue(Helper.GetFieldByName("Email", formSubmitContext.Fields));               
+                PostSubmitter post = new PostSubmitter();
+               
+                post.Url = "http://seeker.dice.com/jobsearch/servlet/JobSearch";
+                post.PostItems.Add("first_name", firstName);
+                post.PostItems.Add("last_name", lastName);
+                post.PostItems.Add("email", email);
+               
+                post.Type = PostSubmitter.PostTypeEnum.Post;
+                string result = post.Post();
                 Logger.Info(Invariant($"Form {formSubmitContext.FormId} submitted successfully."), this);
             }
             else
