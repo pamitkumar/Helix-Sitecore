@@ -23,19 +23,51 @@
     </table>
     @if (Model.SearchResults.Any())
     {
+        var highlightField = Model.Query;
         <h2 class="display-12">Results</h2>
         <ol>
             @foreach (PageContentResultItem result in Model.SearchResults)
             {
                 var item = Sitecore.Context.Database.GetItem(result.ItemId);
-                var itemURL = item !=null?Sitecore.Links.LinkManager.GetItemUrl(item):"#";
+                var itemURL = item != null ? Sitecore.Links.LinkManager.GetItemUrl(item) : "#";
+
+                //result[string.Format("highlight{0}", highlightField)] = string.Join(", ", Model.SearchResults.Highlights[result["_uniqueid"].ToString()].Snippets[highlightField]);
+
+                //result[string.Format("highlight{0}", highlightField)]= string.Join(", ", Model.SearchResults.Highlights[result.Description.ToString()].Snippets[highlightField]);
+               
                 <li style="margin: 0px 0px 20px; padding: 10px; border:solid 1px #eee">
+
                     <strong><a href="@itemURL">@result.Title</a></strong><br />
-                    @(result.Description != null && result.Description.Length >= 100 ? result.Description.Substring(0, 100) + "..." : result.Description + "...")<br />
-                    @*<i>@result.CustomContent</i>*@
+                    @if (Model.SearchResults.Highlights != null && Model.SearchResults.Highlights.Keys.Any())
+                    {
+                        var highlights = Model.SearchResults.Highlights[result.Fields["_uniqueid"].ToString()];
+                        if (highlights.Any())
+                        {
+
+                            foreach (var highlight in highlights)
+                            {
+                                //The Healthy Workplace Toolkits
+                                @Html.Raw(string.Join(",", highlight.Value))
+                                @*if (highlight.Key == "summary_t")
+                                    {
+                                        <li>@Html.Raw(string.Join(",", highlight.Value))</li>
+                                    }*@
+                                // - The <em>healthy</em> workplace toolkits support you either as a health care employer, RCN workplace representative, employment agency or host organisation to create <em>healthy</em> working environments.
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        @result.Description;
+                    }
                 </li>
             }
+
+
         </ol>
+
+
 
         @Html.PagedListPager((IPagedList)Model.PagedResults, page => string.Format("/searchresultspage?q={0}&pageNumber={1}", Model.Query, page))
     }
