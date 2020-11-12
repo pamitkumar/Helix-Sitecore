@@ -1,0 +1,12 @@
+﻿@model NISSitecore.Feature.SocialShare.Models.SocialButton
+
+
+@if (Model != null)
+{
+    <div>
+        @foreach (var socialMediaitem in Model.SocialMediaList)
+        {
+            <a href="@socialMediaitem.SocialMediaUrl" title="@socialMediaitem.SocialMediaTitle"><img src="@socialMediaitem.SocialMediaImage" /></a>
+        }
+    </div>
+}
