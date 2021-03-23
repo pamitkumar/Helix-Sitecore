@@ -1,0 +1,17 @@
+﻿@using Sitecore.Mvc.Presentation
+@using Corlate.Feature.Metadata.Models
+@*@model RenderingModel*@
+@{
+    Layout = null;
+    Metadata metadata = new Metadata(Model.PageItem);
+}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+@if (metadata != null)
+{
+    <meta name="description" content="@metadata.Description" />
+    <meta name="keywords" content="@metadata.Keywords" />
+    <title>@metadata.Title</title>
+}

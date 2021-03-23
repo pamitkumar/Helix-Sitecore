@@ -1,0 +1,29 @@
+﻿@using Corlate.Feature.PageContent.Models
+@model CourseArchive
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    <!--=========== BEGIN COURSE ARCHIVE SECTION ================-->
+   <section id="courseArchive">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div id="divCourseTeasersListing" class="courseArchive_content">
+                        @Html.Partial(Corlate.Foundation.Common.Models.GlobalConstants.SUBLAYOUTS_PATH + "/PageContent/_CourseTeasersListing.cshtml", Model)
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    <!--=========== END COURSE ARCHIVE SECTION ================-->    
+}
+else
+{
+    <span></span>
+}
+

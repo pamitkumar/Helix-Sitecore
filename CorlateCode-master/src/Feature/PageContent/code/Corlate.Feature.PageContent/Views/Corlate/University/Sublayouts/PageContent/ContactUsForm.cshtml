@@ -1,0 +1,173 @@
+﻿@using Corlate.Feature.PageContent.Models
+@using Sitecore.Mvc
+@model ContactUsFormSource
+@{
+    Layout = null;
+    <style>
+        .validation-msg{
+            font-size: 12px;
+            margin-left: 10px;
+            color:red;
+        }
+        .color-success {
+            color: forestgreen;
+        }
+
+        .color-error {
+            color: red;
+        }
+
+        #spSubmitStatus {
+            margin-left: 10px;
+            font-weight: bold;            
+        }
+    </style>
+}
+
+@if (Model != null)
+{
+    <!--=========== BEGIN CONTACT SECTION ================-->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="title_area">
+                        <h2 class="title_two">@Html.Sitecore().Field(Model.TitleID, Model.InnerItem)</h2>
+                        <span></span>
+                        @Html.Sitecore().Field(Model.DescriptionID, Model.InnerItem)
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                    <div class="contact_form wow fadeInLeft">
+                        <form class="submitphoto_form">
+                            <div>
+                                <span class="validation-msg" id="spFullname"></span>
+                                <input type="text" id="txtFullname" class="wp-form-control wpcf7-text" placeholder="Your name">                                
+                            </div>
+                            <div>
+                                <span class="validation-msg" id="spEmail"></span>
+                                <input type="text" id="txtEmail" class="wp-form-control wpcf7-email" placeholder="Email address">                                
+                            </div>
+                            <div>
+                                <span class="validation-msg" id="spSubject"></span>
+                                <input type="text" id="txtSubject" class="wp-form-control wpcf7-text" placeholder="Subject">                                
+                            </div>
+                            <div>
+                                <span class="validation-msg" id="spComments"></span>
+                                <textarea id="txtComments" class="wp-form-control wpcf7-textarea" cols="30" rows="10" placeholder="What would you like to tell us"></textarea>                                
+                            </div>
+                            <input type="button" id="btnContactUsFormSubmit" value="Submit" class="wpcf7-submit">
+                            <span id="spSubmitStatus"></span>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="contact_address wow fadeInRight">
+                        @Html.Sitecore().Field(Model.AddressID, Model.InnerItem)
+                        <div class="address_group">
+                            <ul class="footer_social">
+                                @if (Model.SocialNetworkLinks != null && Model.SocialNetworkLinks.Count > 0)
+                                {
+                                    foreach (FooterSocialLink link in Model.SocialNetworkLinks)
+                                    {
+                                        <li>
+                                            <a href="@link.TargetURL" class="soc_tooltip" title="" data-placement="top" data-toggle="tooltip" data-original-title="@link.Title"><i class="@link.CSSClass"></i></a>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=========== END CONTACT SECTION ================-->
+
+    <script>
+        jQuery(function ($) {
+            'use strict';
+
+            $(function () {
+
+                $("#btnContactUsFormSubmit").click(function () {
+                    if (ValidateForm()) {
+                        SaveContactUsFormData();
+                    }
+                });
+
+                function ValidateForm() {
+                    $(".validation-msg").html("");
+                    $("#spSubmitStatus").html("");                    
+
+                    var reqdMessage = "This field is required";
+                    var isValidData = true;
+                   
+                    if ($("#txtFullname").val().length <= 0) {                       
+                        $("#spFullname").html(reqdMessage);
+                        isValidData = false;
+                    }
+
+                    if ($("#txtEmail").val().length <= 0) {
+                        $("#spEmail").html(reqdMessage);
+                        isValidData = false;
+                    }
+
+                    if ($("#txtSubject").val().length <= 0) {
+                        $("#spSubject").html(reqdMessage);
+                        isValidData = false;
+                    }
+
+                    if ($("#txtComments").val().length <= 0) {
+                        $("#spComments").html(reqdMessage);
+                        isValidData = false;
+                    }
+
+                    return isValidData;
+                }
+
+                function SaveContactUsFormData() {
+                    var contactUsFormDataModel = {};
+                    contactUsFormDataModel.Fullname = $("#txtFullname").val();
+                    contactUsFormDataModel.Email = $("#txtEmail").val();
+                    contactUsFormDataModel.Subject = $("#txtSubject").val();
+                    contactUsFormDataModel.Comments = $("#txtComments").val();
+
+                    $.ajax({
+                        url: '@Url.Action("SaveContactUsFormData", "ContactUs")',
+                        type: "POST",
+                        data: '{contactUsFormDataModel: ' + JSON.stringify(contactUsFormDataModel) + '}',
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                            console.log(response.Status + "-" + response.Message);
+                            if (response.Status == "1") {
+                                $('input[type="text"]').val('');
+                                $('textarea').val('');
+                                $("#spSubmitStatus").html(response.Message).removeClass("color-error").addClass("color-success").fadeIn;
+                            }
+                            else if (response.Status == "0") {
+                                $("#spSubmitStatus").html(response.Message).removeClass("color-success").addClass("color-error").fadeIn;
+                            }
+
+                            //fadeout the message after a few seconds
+                            setTimeout(function () { $("#spSubmitStatus").fadeOut() }, 5000);
+                        },
+                        error: function (data) {
+                            console.log("error", data);
+                        }
+                    });
+                }
+            });
+
+
+        });
+
+    </script>
+}
+else
+{
+    <span></span>
+}

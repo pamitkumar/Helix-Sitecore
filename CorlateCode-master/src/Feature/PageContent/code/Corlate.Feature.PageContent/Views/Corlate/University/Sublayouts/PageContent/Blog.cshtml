@@ -1,0 +1,110 @@
+﻿@using Corlate.Feature.PageContent.Models
+@using Sitecore.Mvc
+@model Blog
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    <!--=========== BEGIN BLOG SECTION ================-->
+    <section id="courseArchive">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                    <div id="divBlogDetails" class="courseArchive_content">
+                        @*@Html.Partial(Corlate.Foundation.Common.Models.GlobalConstants.SUBLAYOUTS_PATH + "PageContent/_BlogDetails.cshtml", Model)*@
+                        <!-- start blog details  -->
+                        <div class="row">
+                            <!-- start single blog -->
+                            <div class="col-lg-12 col-12 col-sm-12">
+                                <div class="single_blog">
+                                    <div class="blogimg_container">
+                                        <a class="blog_img">
+                                            @Html.Sitecore().Field(Model.ImageID, Model.InnerItem)
+                                        </a>
+                                    </div>
+                                    <h2 class="blog_title">
+                                        <a>@Html.Sitecore().Field(Model.TitleID, Model.InnerItem)</a>
+                                    </h2>
+                                    <div class="blog_commentbox">
+                                        @if (!string.IsNullOrEmpty(Model.Author))
+                                        {
+                                            <p><i class="fa fa-user"></i>@Html.Sitecore().Field(Model.AuthorID, Model.InnerItem)</p>
+                                        }
+                                        @if (!string.IsNullOrEmpty(Model.PostedDate))
+                                        {
+                                            <p><i class="fa fa-calendar"></i>@Model.PostedDate</p>
+                                        }
+                                    </div>
+                                    @Html.Sitecore().Field(Model.ContentID, Model.InnerItem)
+                                </div>
+                                <!-- single blog nex & prev button -->
+                                <div class="single_blog_prevnext">
+                                    @if (!string.IsNullOrEmpty(Model.PreviousBlogURL))
+                                    {
+                                        <a class="prev_post wow fadeInLeft" href="@Model.PreviousBlogURL"><i class="fa fa-angle-left"></i>Previous Post</a>
+                                    }
+                                    @if (!string.IsNullOrEmpty(Model.NextBlogURL))
+                                    {
+                                        <a class="next_post wow fadeInRight" href="@Model.NextBlogURL">Next Post<i class="fa fa-angle-right"></i></a>
+                                    }
+                                </div>
+                            </div>
+                            <!-- End single blog -->
+                        </div>
+                        <!-- end blog details  -->
+                        <!-- start related post -->
+                        <div class="related_post">
+                            <h2>@Html.Sitecore().Field(Model.RelatedPostsLabelID, Model.InnerItem)</h2>
+                            <div class="row">
+                                @if (Model.RelatedPosts != null && Model.RelatedPosts.Count > 0)
+                                {
+                                    foreach (Blog blog in Model.RelatedPosts)
+                                    {
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="single_blog_archive wow fadeInUp">
+                                                <div class="blogimg_container">
+                                                    <a class="blog_img" href="@blog.PageURL">
+                                                        @Html.Sitecore().Field(blog.ImageID, blog.InnerItem)
+                                                    </a>
+                                                </div>
+                                                <h2 class="blog_title"><a href="@blog.InnerItem">@Html.Sitecore().Field(blog.TitleID, blog.InnerItem)</a></h2>
+                                                <div class="blog_commentbox">
+                                                    @if (!string.IsNullOrEmpty(blog.Author))
+                                                    {
+                                                        <p><i class="fa fa-user"></i>@Html.Sitecore().Field(blog.AuthorID, blog.InnerItem)</p>
+                                                    }
+                                                    @if (!string.IsNullOrEmpty(blog.PostedDate))
+                                                    {
+                                                        <p><i class="fa fa-calendar"></i>@blog.PostedDate</p>
+                                                    }
+                                                </div>
+                                                <p class="blog_summary">@Html.Sitecore().Field(blog.BriefDescriptionID, blog.InnerItem)</p>
+                                                <a href="@blog.PageURL" class="blog_readmore">@Html.Sitecore().Field(blog.ReadMoreLabelID, blog.InnerItem)</a>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <!-- end related post -->
+                    </div>
+                </div>
+
+                <!-- start sidebar -->
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="courseArchive_sidebar">
+                        @Html.Sitecore().Placeholder("sidebar")
+                    </div>
+                </div>
+                <!-- end sidebar -->
+            </div>
+        </div>
+    </section>
+    <!--=========== END BLOG SECTION ================-->
+}
+else
+{
+    <span></span>
+}

@@ -1,0 +1,16 @@
+﻿<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <publishUrl>D:\inetpub\wwwroot\Corlate\Website</publishUrl>
+    <ExcludeFilesFromDeployment>bin\Sitecore.*.dll;bin\Coveo.*.dll;bin\Newtonsoft.*.dll\Sitecore.WFFM.*</ExcludeFilesFromDeployment>
+    <WebPublishMethod>FileSystem</WebPublishMethod>
+    <LastUsedBuildConfiguration>Debug</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <LaunchSiteAfterPublish>False</LaunchSiteAfterPublish>
+    <ExcludeApp_Data>False</ExcludeApp_Data>
+    <DeleteExistingFiles>False</DeleteExistingFiles>
+    <ExcludeFoldersFromDeployment>sourcefiles;raw-images;</ExcludeFoldersFromDeployment>
+    <!--<ExcludeFilesFromDeployment>bin\Sitecore.*.dll;bin\Coveo.*.dll;bin\Newtonsoft.*.dll</ExcludeFilesFromDeployment>-->
+    <!--<publishUrl>http://hostname</publishUrl>
+    <IncludeSetACLProviderOnDestination>False</IncludeSetACLProviderOnDestination>-->
+  </PropertyGroup>
+</Project>

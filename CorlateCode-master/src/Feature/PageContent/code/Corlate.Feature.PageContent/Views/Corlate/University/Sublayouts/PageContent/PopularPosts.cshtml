@@ -1,0 +1,40 @@
+﻿@using Corlate.Feature.PageContent.Models
+@using Sitecore.Mvc
+@model PopularPostsSource
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    <!-- start popular postsr -->
+    <div class="single_sidebar">
+        <h2>@Html.Sitecore().Field(Model.TitleID, Model.InnerItem) <span class="fa fa-angle-double-right"></span></h2>
+        <ul class="news_tab">
+            @if (Model.FeaturedBlogs != null && Model.FeaturedBlogs.Count > 0)
+            {
+                foreach (Blog blog in Model.FeaturedBlogs)
+                {
+                    <li>
+                        <div class="media">
+                            <div class="media-left">    
+                                <a href="@blog.PageURL" class="news_img">
+                                    @Html.Sitecore().Field(blog.ImageID, blog.InnerItem, new { @class = "media-object" })                                   
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <a href="@blog.PageURL">@Html.Sitecore().Field(blog.TitleID, blog.InnerItem)</a>
+                                <span class="feed_date">@blog.PostedDate</span>
+                            </div>
+                        </div>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+    <!-- End popular posts -->
+}
+else
+{
+    <span></span>
+}

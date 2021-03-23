@@ -1,0 +1,106 @@
+﻿@using Corlate.Feature.PageContent.Models
+@using Sitecore.Mvc
+@model BlogArchive
+@{
+    Layout = null;
+    <style>
+        ul.pagination li a {
+            cursor: pointer;
+        }
+    </style>
+}
+
+@if (Model != null)
+{
+    <!-- start blog teasers listing  -->
+    <input type="hidden" id="hdnCategoryID" value="@Model.SelectedCategoryID" />
+    <input type="hidden" id="hdnTagID" value="@Model.SelectedTagID" />
+    <input type="hidden" id="hdnBlogArchivePageItemID" value="@Model.BlogArchivePageItemID" />
+
+    <div class="row">
+        @if (Model.BlogTeasers != null && Model.BlogTeasers.Count > 0)
+        {
+            foreach (Blog blog in Model.BlogTeasers)
+            {
+                <div class="col-lg-12 col-12 col-sm-12">
+                    <div class="single_blog_archive wow fadeInUp">
+                        <div class="blogimg_container">
+                            <a href="@blog.PageURL" class="blog_img">
+                                @Html.Sitecore().Field(blog.ImageID, blog.InnerItem)
+                            </a>
+                        </div>
+                        <h2 class="blog_title"><a href="@blog.PageURL"> @Html.Sitecore().Field(blog.TitleID, blog.InnerItem)</a></h2>
+                        <div class="blog_commentbox">
+                            @if (!string.IsNullOrEmpty(blog.Author))
+                            {
+                            <p><i class="fa fa-user"></i>@Html.Sitecore().Field(blog.AuthorID, blog.InnerItem)</p>
+                            }
+                            @if (!string.IsNullOrEmpty(blog.PostedDate))
+                            {
+                            <p><i class="fa fa-calendar"></i>@blog.PostedDate</p>
+                            }
+                        </div>
+                        <p class="blog_summary">@Html.Sitecore().Field(blog.BriefDescriptionID, blog.InnerItem)</p>
+                        <a class="blog_readmore" href="@blog.PageURL">@Html.Sitecore().Field(blog.ReadMoreLabelID, blog.InnerItem)</a>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <!-- end blog teasers listing  -->
+
+    <!--start pagination-->
+    if (Model.Pagination.TotalPages > 1)
+    {
+        <nav>
+            <ul class="pagination wow fadeInLeft">
+                <li class="@(Model.Pagination.SelectedPage == 1 ? "disabled" : "")">
+                    <a onclick="GetBlogTeasers(1)">First</a>
+                </li>
+                <li class="@(Model.Pagination.SelectedPage == 1 ? "disabled" : "")">
+                    <a onclick="GetBlogTeasers(@Model.Pagination.SelectedPage - 1)"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a>
+                </li>
+                @for (int index = Model.Pagination.FirstPageNumberInPagination; index <= Model.Pagination.LastPageNumberInPagination; index++)
+                {
+                    <li class="@(Model.Pagination.SelectedPage == index ? "active" : "")">
+                        <a onclick="GetBlogTeasers(@index)">@index</a>
+                    </li>
+                }
+                <li class="@(Model.Pagination.SelectedPage == Model.Pagination.TotalPages ? "disabled" : "")">
+                    <a onclick="GetBlogTeasers(@Model.Pagination.SelectedPage + 1)"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a>
+                </li>
+                <li class="@(Model.Pagination.SelectedPage == Model.Pagination.TotalPages ? "disabled" : "")">
+                    <a onclick="GetBlogTeasers(@Model.Pagination.TotalPages)">Last</a>
+                </li>
+            </ul>
+        </nav>
+    }
+    <!--end pagination-->
+
+    <script>
+        function GetBlogTeasers(pgNumber) {
+            $.ajax({
+                url: '@Url.Action("GetBlogTeasers", "Blogs")',
+                type: "GET",
+                data: {
+                    pageNumber: pgNumber,
+                    categoryID: $("#hdnCategoryID").val(),
+                    tagID: $("#hdnTagID").val(),
+                    blogArchivePageItemID: $("#hdnBlogArchivePageItemID").val()
+                },
+                dataType: "html",
+                context: this,
+                success: function (data) {
+                    $("#divBlogTeasersListing").html(data);
+                },
+                error: function (data) {
+                    console.log("error", data);
+                }
+            });            
+        }
+    </script>
+}
+else
+{
+    <span></span>
+}

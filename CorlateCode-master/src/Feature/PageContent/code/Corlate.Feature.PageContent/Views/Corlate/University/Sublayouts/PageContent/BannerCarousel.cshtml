@@ -1,0 +1,46 @@
+﻿@using Corlate.Feature.PageContent.Models
+@using Sitecore.Mvc
+@model BannerCarouselSource
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    <!--=========== BEGIN SLIDER SECTION ================-->
+    <section class="slider">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="slider_area">
+                    @if (Model.Slides != null && Model.Slides.Count > 0)
+                    {
+                        <div class="slides">
+                            <ul class="slides-container">
+                                @foreach (BannerCarouselSlide slide in Model.Slides)
+                                {
+                                    <li>
+                                        @Html.Sitecore().Field(slide.ImageID, slide.InnerItem)
+                                        <div class="slider_caption">
+                                            <h2>@Html.Sitecore().Field(slide.TitleID, slide.InnerItem)</h2>
+                                            @Html.Sitecore().Field(slide.DescriptionID, slide.InnerItem)
+                                            @Html.Sitecore().Field(slide.CTAID, slide.InnerItem, new { @class = "slider_btn" })
+                                        </div>
+                                    </li>
+                                }
+                            </ul>
+                            <nav class="slides-navigation">
+                                <a href="#" class="next"></a>
+                                <a href="#" class="prev"></a>
+                            </nav>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=========== END SLIDER SECTION ================-->
+}
+else
+{
+    <span></span>
+}

@@ -1,0 +1,36 @@
+﻿@using Corlate.Feature.PageContent.Models
+@using Sitecore.Mvc
+@model ImageGallerySource
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    <!--=========== BEGIN GALLERY SECTION ================-->
+    <section id="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div id="gallerySLide" class="gallery_area">
+                        @if (Model.GalleryItems != null && Model.GalleryItems.Count > 0)
+                        {
+                            foreach (ImageGalleryItem galleryItem in Model.GalleryItems)
+                            {
+                               <a href="@galleryItem.ImageURL" title="@galleryItem.Title">
+                                    <img class="gallery_img" src="@galleryItem.ThumbnailURL" alt="img" />
+                                    <span class="view_btn">@Html.Sitecore().Field(galleryItem.ViewLabelID, galleryItem.InnerItem)</span>
+                                </a>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=========== END GALLERY SECTION ================-->
+}
+else
+{
+    <span></span>
+}

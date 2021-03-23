@@ -1,0 +1,91 @@
+﻿
+@using Corlate.Feature.PageContent.Models
+@using Sitecore.Mvc
+@model CourseArchive
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    <input type="hidden" id="hdnFirstAndLastCourseItemIDsInPage" value="@Model.FirstAndLastCourseItemIDsInPage" />
+    <div class="row">
+        @if (Model.CourseTeasers != null && Model.CourseTeasers.Count > 0)
+        {
+            foreach (CourseDetails course in Model.CourseTeasers)
+            {
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="single_course wow fadeInUp">
+                        <div class="singCourse_imgarea">
+                            @Html.Sitecore().Field(course.TeaserImageID, course.InnerItem)
+                            <div class="mask">
+                                <a href="@course.PageURL" class="course_more">@Html.Sitecore().Field(course.ViewCourseLabelID, course.InnerItem)</a>
+                            </div>
+                        </div>
+                        <div class="singCourse_content">
+                            <h3 class="singCourse_title"><a href="@course.PageURL">@Html.Sitecore().Field(course.TitleID, course.InnerItem)</a></h3>
+                            <p class="singCourse_price"><span>@Html.Sitecore().Field(course.CostID, course.InnerItem)</span> @Html.Sitecore().Field(course.DurationID, course.InnerItem)</p>
+                            @Html.Sitecore().Field(course.BriefDescriptionID, course.InnerItem)
+                        </div>
+
+                        @if (course.Instructor != null)
+                        {
+                            <div class="singCourse_author">
+                                @Html.Sitecore().Field(course.Instructor.ImageID, course.Instructor.InnerItem)
+                                <p>
+                                    @if (!string.IsNullOrEmpty(course.Instructor.Designation))
+                                    {
+                                        @Html.Sitecore().Field(course.Instructor.InstructorNameID, course.Instructor.InnerItem)<text>,</text> @Html.Sitecore().Field(course.Instructor.DesignationID, course.Instructor.InnerItem)
+                                    }
+                                    else
+                                    {
+                                        @Html.Sitecore().Field(course.Instructor.InstructorNameID, course.Instructor.InnerItem)
+                                    }
+                                </p>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <!-- start previous & next button -->
+    <div class="single_blog_prevnext">
+        @if (Model.ShowPreviousButton)
+        {
+            <a href="javascript:;" onclick="GetCourseTeasers('0')" class="prev_post wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
+                <i class="fa fa-angle-left"></i>Previous
+            </a>
+        }
+        @if (Model.ShowNextButton)
+        {
+            <a href="javascript:;" onclick="GetCourseTeasers('2')" class="next_post wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">Next<i class="fa fa-angle-right"></i></a>
+        }
+    </div>
+
+    <script>        
+
+        function GetCourseTeasers(pgNumber) {
+            $.ajax({
+                url: '@Url.Action("GetCourseTeasers", "Courses")',
+                type: "GET",
+                data: {
+                    pageNumber: pgNumber,
+                    referenceCourseItemIDs: $("#hdnFirstAndLastCourseItemIDsInPage").val()
+                },
+                dataType: "html",
+                context: this,
+                success: function (data) {
+                    $("#divCourseTeasersListing").html(data);
+                },
+                error: function (data) {
+                    console.log("error", data);
+                }
+            });
+        }
+    </script>
+}
+else
+{
+    <span></span>
+}

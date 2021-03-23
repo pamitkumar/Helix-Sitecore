@@ -1,0 +1,46 @@
+﻿@using Corlate.Feature.PageContent.Models
+@using Sitecore.Mvc
+@model TagsOrCategoriesSidebarFilter
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    <div class="single_sidebar">
+        <h2>@Model.SectionTitle <span class="fa fa-angle-double-right"></span></h2>
+        @if (!Model.DisplayItemsAsTags)
+        {
+            if (Model.BlogCategories != null && Model.BlogCategories.Count > 0)
+            {
+                        <!-- start sidebar categories section -->
+                <ul>
+                    @foreach (BlogCategory category in Model.BlogCategories)
+                    {
+                        <li><a href="@(Model.BlogArchivePageURL+"?cat=" + category.InnerItem.ID)">@Html.Sitecore().Field(category.TitleID, category.InnerItem)</a></li>
+                    }
+                </ul>
+                        <!-- End sidebar categories section -->
+            }
+        }
+        else
+        {
+            if (Model.BlogTags != null && Model.BlogTags.Count > 0)
+            {
+                         <!-- start sidebar tags section -->
+                <ul class="tags_nav">
+                    @foreach (BlogTag tag in Model.BlogTags)
+                    {
+                        <li><a href="@(Model.BlogArchivePageURL+"?tag=" + tag.InnerItem.ID)"><i class="fa fa-tags"></i> @Html.Sitecore().Field(tag.TitleID, tag.InnerItem)</a></li>
+                    }
+                </ul>
+                         <!-- end sidebar tags section -->
+            }
+        }
+
+    </div>
+}
+else
+{
+    <span></span>
+}

@@ -1,0 +1,36 @@
+﻿@using Corlate.Feature.PageContent.Models
+@using Sitecore.Mvc
+@model BlogArchive
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    <!--=========== BEGIN BLOG ARCHIVE SECTION ================-->
+    <section id="courseArchive">
+        <div class="container">
+            <div class="row">
+                <!-- start course content -->
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                    <div id="divBlogTeasersListing" class="courseArchive_content">
+                        @Html.Partial(Corlate.Foundation.Common.Models.GlobalConstants.SUBLAYOUTS_PATH + "/PageContent/_BlogTeasersListing.cshtml", Model)
+                    </div>
+                </div>
+                <!-- End course content -->
+                <!-- start sidebar -->
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="courseArchive_sidebar">
+                       @Html.Sitecore().Placeholder("sidebar")
+                    </div>
+                </div>
+                <!-- start sidebar -->
+            </div>
+        </div>
+    </section>
+    <!--=========== END BLOG ARCHIVE SECTION ================-->
+}
+else
+{
+    <span></span>
+}

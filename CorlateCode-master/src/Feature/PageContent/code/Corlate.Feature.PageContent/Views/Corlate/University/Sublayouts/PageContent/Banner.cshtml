@@ -1,0 +1,19 @@
+﻿@using Corlate.Feature.PageContent.Models
+@using Sitecore.Mvc
+@model Banner
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    <!--=========== BEGIN COURSE BANNER SECTION ================-->
+    <section id="imgBanner" style="background-image:url(@Model.ImageURL)">
+        <h2>@Html.Sitecore().Field(Model.TitleID, Model.InnerItem)</h2>
+    </section>
+    <!--=========== END COURSE BANNER SECTION ================-->
+}
+else
+{
+    <span></span>
+}

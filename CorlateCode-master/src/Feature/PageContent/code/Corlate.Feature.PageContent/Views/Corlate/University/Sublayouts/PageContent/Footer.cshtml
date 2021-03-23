@@ -1,0 +1,62 @@
+﻿@using Corlate.Feature.PageContent.Models
+@using Sitecore.Mvc
+@model FooterSource
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    <!--=========== BEGIN FOOTER SECTION ================-->
+    <footer id="footer">
+        <!-- Start footer top area -->
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3  col-md-3 col-sm-3">
+                        <div class="single_footer_widget">
+                            <h3>@Html.Sitecore().Field(Model.TopSectionTitleID, Model.InnerItem)</h3>
+                            <ul class="footer_social">
+                                @if (Model.SocialLinks != null && Model.SocialLinks.Count > 0)
+                                {
+                                    foreach (FooterSocialLink socialLink in Model.SocialLinks)
+                                    {
+                                        <li>
+                                            <a data-toggle="tooltip" data-placement="top" title="@socialLink.Title" class="soc_tooltip" href="@socialLink.TargetURL">
+                                                <i class="@socialLink.CSSClass"></i>
+                                            </a>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End footer top area -->
+        <!-- Start footer bottom area -->
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="footer_bootomLeft">
+                            @Html.Sitecore().Field(Model.Identity.FooterCopyrightTextID, Model.Identity.InnerItem)                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="footer_bootomRight">
+                            <p>Designed by <a href="http://wpfreeware.com/" rel="nofollow">Wpfreeware.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End footer bottom area -->
+    </footer>
+    <!--=========== END FOOTER SECTION ================-->
+}
+else
+{
+    <span></span>
+}

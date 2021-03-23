@@ -1,0 +1,68 @@
+﻿@using Corlate.Feature.Navigation.Models
+@model TopMenuSource
+@{
+    Layout = null;
+    bool isNormalMode = !Sitecore.Context.PageMode.IsExperienceEditor && !Sitecore.Context.PageMode.IsPreview;
+}
+
+@if (Model != null)
+{
+    <!-- BEGIN MENU -->
+    <div class="menu_area">
+        <!--When viewing in Experience editior, the sitecore menu overlaps the site menu. So giving a top-margin.-->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="@(!isNormalMode ? "margin-top:89px" : "")">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- LOGO -->
+                    <a class="navbar-brand" href="@Model.Identity.LogoTargetURL"><span>@Model.Identity.LogoTitle</span></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+                        @if (Model != null && Model.TopMenuItems.Count > 0)
+                    {
+                        foreach (NavigationItem menuItem in Model.TopMenuItems)
+                        {
+                            if (menuItem.SubmenuItems != null && menuItem.SubmenuItems.Count > 0)
+                            {
+                                /*Render sub items*/
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            @menuItem.TargetURLDescription&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            @foreach (NavigationItem subMenuItem in menuItem.SubmenuItems)
+                                        {
+                                        <li class="@(subMenuItem.IsCurrentPage ? "active" : "")">
+                                            <a href="@subMenuItem.TargetURL">@subMenuItem.TargetURLDescription</a>
+                                        </li>
+                                        }
+                        </ul>
+                    </li>
+                            }
+                            else
+                            {
+                                /*Render parent items*/
+                    <li class="@(menuItem.IsCurrentPage ? "active" : "")">
+                        <a href="@menuItem.TargetURL">@menuItem.TargetURLDescription</a>
+                    </li>
+                            }
+                        }
+                    }
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </div>
+    <!-- END MENU -->
+}
+else
+{
+    <span></span>
+}

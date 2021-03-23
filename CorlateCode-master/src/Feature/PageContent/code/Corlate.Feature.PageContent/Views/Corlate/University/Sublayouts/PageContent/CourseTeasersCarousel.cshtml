@@ -1,0 +1,77 @@
+﻿@using Corlate.Feature.PageContent.Models
+@using Sitecore.Mvc
+@model CourseTeasersCarouselSource
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    <section id="ourCourses">
+        <div class="container">           
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="title_area">
+                        <h2 class="title_two">@Html.Sitecore().Field(Model.TitleID, Model.InnerItem)</h2>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="ourCourse_content">
+                        <ul class="course_nav">
+                            @if (Model.CourseTeasers != null && Model.CourseTeasers.Count > 0)
+                            {
+                                foreach (CourseDetails teaser in Model.CourseTeasers)
+                                {
+                                    <li>
+                                        <div class="single_course">
+                                            <div class="singCourse_imgarea">
+                                                @Html.Sitecore().Field(teaser.TeaserImageID, teaser.InnerItem)
+                                                <div class="mask">
+                                                    <a href="@teaser.PageURL" class="course_more">@Html.Sitecore().Field(teaser.ViewCourseLabelID, teaser.InnerItem)</a>
+                                                </div>
+                                            </div>
+                                            <div class="singCourse_content">
+                                                <h3 class="singCourse_title"><a href="@teaser.PageURL">@Html.Sitecore().Field(teaser.TitleID, teaser.InnerItem)</a></h3>
+                                                <p class="singCourse_price"><span>@Html.Sitecore().Field(teaser.CostID, teaser.InnerItem)</span> @Html.Sitecore().Field(teaser.DurationID, teaser.InnerItem)</p>
+                                                @Html.Sitecore().Field(teaser.BriefDescriptionID, teaser.InnerItem)
+                                            </div>
+
+                                            @if (teaser.Instructor != null)
+                                            {
+                                                <div class="singCourse_author">
+                                                    @Html.Sitecore().Field(teaser.Instructor.ImageID, teaser.Instructor.InnerItem)
+                                                    <p>
+                                                        @if (!string.IsNullOrEmpty(teaser.Instructor.Designation))
+                                                        {
+                                                            @Html.Sitecore().Field(teaser.Instructor.InstructorNameID, teaser.Instructor.InnerItem)<text>,</text> @Html.Sitecore().Field(teaser.Instructor.DesignationID, teaser.Instructor.InnerItem)
+                                                        }
+                                                        else
+                                                        {
+                                                            @Html.Sitecore().Field(teaser.Instructor.InstructorNameID, teaser.Instructor.InnerItem)
+                                                        }
+                                                    </p>
+                                                </div>
+                                            }
+
+
+                                        </div>
+                                    </li>
+                                }
+                            }                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+}
+else
+{
+    <span></span>
+}

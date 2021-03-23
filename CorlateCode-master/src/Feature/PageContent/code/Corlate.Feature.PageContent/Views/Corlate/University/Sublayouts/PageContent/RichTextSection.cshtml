@@ -1,0 +1,26 @@
+﻿@using Corlate.Feature.PageContent.Models
+@using Sitecore.Mvc
+@model RichTextSection
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    <section class="aboutUs">
+        <div class="container">
+            <div class="row">                
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="aboutus_area wow fadeInUp">
+                        <h2 class="title_one">@Html.Sitecore().Field(Model.TitleID, Model.InnerItem)</h2>
+                        @Html.Sitecore().Field(Model.DescriptionID, Model.InnerItem)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <span></span>
+}

@@ -1,0 +1,135 @@
+﻿@using Corlate.Feature.PageContent.Models
+@using Sitecore.Mvc
+@model CourseDetails
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    <!--=========== BEGIN COURSE DETAILS SECTION ================-->
+    <section id="courseArchive">
+        <div class="container">
+            <div class="row">
+                <!-- start course content -->
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="courseArchive_content">
+                        <div class="singlecourse_ferimg_area">
+                            <div class="singlecourse_ferimg">
+                                @Html.Sitecore().Field(Model.MainImageID, Model.InnerItem)
+                            </div>
+                            <div class="singlecourse_bottom">
+                                <h2>@Html.Sitecore().Field(Model.TitleID, Model.InnerItem)</h2>
+                                @if (Model.Instructor != null)
+                                {
+                                    <span class="singlecourse_author">
+                                        @Html.Sitecore().Field(Model.Instructor.ImageID, Model.Instructor.InnerItem)
+                                        @if (!string.IsNullOrEmpty(Model.Instructor.Designation))
+                                        {
+                                            @Html.Sitecore().Field(Model.Instructor.InstructorNameID, Model.Instructor.InnerItem)<text>,</text> @Html.Sitecore().Field(Model.Instructor.DesignationID, Model.Instructor.InnerItem)
+                                        }
+                                        else
+                                        {
+                                            @Html.Sitecore().Field(Model.Instructor.InstructorNameID, Model.Instructor.InnerItem)
+                                        }
+                                    </span>
+                                }
+                                <span class="singlecourse_price">@Html.Sitecore().Field(Model.CostID, Model.InnerItem)</span>
+                            </div>
+                        </div>
+                        <div class="single_course_content">
+                            <h2>@Html.Sitecore().Field(Model.ContentHeadingID, Model.InnerItem)</h2>
+                            @Html.Sitecore().Field(Model.ContentID, Model.InnerItem)
+                            <table class="table table-striped course_table">
+                                <thead>
+                                    <tr>
+                                        @if (!string.IsNullOrEmpty(Model.TimetableColumn1Label))
+                                        {
+                                            <th>@Html.Sitecore().Field(Model.TimetableColumn1LabelID, Model.InnerItem)</th>
+                                        }
+                                        @if (!string.IsNullOrEmpty(Model.TimetableColumn2Label))
+                                        {
+                                            <th>@Html.Sitecore().Field(Model.TimetableColumn2LabelID, Model.InnerItem)</th>
+                                        }
+                                        @if (!string.IsNullOrEmpty(Model.TimetableColumn3Label))
+                                        {
+                                            <th>@Html.Sitecore().Field(Model.TimetableColumn3LabelID, Model.InnerItem)</th>
+                                        }
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.TimetableEvents != null && Model.TimetableEvents.Count > 0)
+                                    {
+                                        foreach (TimetableEvent timetableEvent in Model.TimetableEvents)
+                                        {
+                                            <tr>
+                                                <td>@Html.Sitecore().Field(timetableEvent.CourseTitleID, timetableEvent.InnerItem)</td>
+                                                <td>
+                                                    @if (!string.IsNullOrEmpty(timetableEvent.SelectedInstructorItemID))
+                                                    {
+                                                        @timetableEvent.Instructor.InstructorName
+                                                    }
+                                                </td>
+                                                <td>@Html.Sitecore().Field(timetableEvent.TimingID, timetableEvent.InnerItem)</td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- start related course -->
+                        <div class="related_course">
+                            <h2>@Html.Sitecore().Field(Model.MoreCoursesSectionLabelID, Model.InnerItem)</h2>
+                            <div class="row">
+                                @if (Model.MoreCourses != null && Model.MoreCourses.Count > 0)
+                                {
+                                    foreach (CourseDetails courseDetails in Model.MoreCourses)
+                                    {
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="single_course wow fadeInUp">
+                                                <div class="singCourse_imgarea">
+                                                    @Html.Sitecore().Field(courseDetails.TeaserImageID, courseDetails.InnerItem)
+                                                    <div class="mask">
+                                                        <a class="course_more" href="@courseDetails.PageURL">@Html.Sitecore().Field(courseDetails.ViewCourseLabelID, courseDetails.InnerItem)</a>
+                                                    </div>
+                                                </div>
+                                                <div class="singCourse_content">
+                                                    <h3 class="singCourse_title"><a href="@courseDetails.PageURL">@Html.Sitecore().Field(courseDetails.TitleID, courseDetails.InnerItem)</a></h3>
+                                                    <p class="singCourse_price"><span>@Html.Sitecore().Field(courseDetails.CostID, courseDetails.InnerItem)</span> @Html.Sitecore().Field(courseDetails.DurationID, courseDetails.InnerItem)</p>
+                                                    @Html.Sitecore().Field(courseDetails.BriefDescriptionID, courseDetails.InnerItem)
+                                                </div>
+                                                <div class="singCourse_author">
+                                                    @if (courseDetails.Instructor != null)
+                                                    {
+                                                        @Html.Sitecore().Field(courseDetails.Instructor.ImageID, courseDetails.Instructor.InnerItem)
+                                                        <p>
+                                                            @if (!string.IsNullOrEmpty(courseDetails.Instructor.Designation))
+                                                            {
+                                                                @Html.Sitecore().Field(courseDetails.Instructor.InstructorNameID, courseDetails.Instructor.InnerItem)<text>,</text> @Html.Sitecore().Field(courseDetails.Instructor.DesignationID, courseDetails.Instructor.InnerItem)
+                                                            }
+                                                            else
+                                                            {
+                                                                @Html.Sitecore().Field(courseDetails.Instructor.InstructorNameID, courseDetails.Instructor.InnerItem)
+                                                            }
+                                                        </p>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <!-- End related course -->
+                    </div>
+                </div>
+                <!-- End course content -->
+            </div>
+        </div>
+    </section>
+    <!--=========== END COURSE DETAILS SECTION ================-->
+}
+else
+{
+    <span></span>
+}
