@@ -1,0 +1,109 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>9422cdb6-2b1e-42c0-a704-d85e02f4206e</ProjectGuid>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>Sitecore.Common.Website.Master</SingleAssemblyName>
+    <UseWebConfigReplacement>false</UseWebConfigReplacement>
+    <DeleteAppCodeCompiledFiles>true</DeleteAppCodeCompiledFiles>
+    <LegacyFileReplacement>false</LegacyFileReplacement>
+    <SitecoreDatabase>master</SitecoreDatabase>
+    <AssemblyName>Sitecore.Common.Website.Master</AssemblyName>
+    <Name>Sitecore.Common.Website.Master</Name>
+    <RootNamespace>Sitecore.Common.Website.Master</RootNamespace>
+    <ManageRoles>False</ManageRoles>
+    <AssemblyStatus>Exclude</AssemblyStatus>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <SitecoreDeployFolder>C:\inetpub\wwwroot\sc9demo.local</SitecoreDeployFolder>
+    <SitecoreWebUrl>http://sc9demo.local</SitecoreWebUrl>
+    <SitecoreAccessGuid>a0446076-efec-46ed-b438-04b1e978683d</SitecoreAccessGuid>
+    <InstallSitecoreConnector>True</InstallSitecoreConnector>
+    <EnableValidations>False</EnableValidations>
+    <ValidationSettingsFilePath>.\Sitecore.Common.Website.Master_Debug.xml</ValidationSettingsFilePath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <SitecoreItem Include="sitecore\layout.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Layouts.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Layouts\Rendering Asset Layout.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+  </ItemGroup>
+  <ItemGroup>
+    <SourceWebProjects Include="{3257fd99-c0e6-453f-ba3b-a78a3cab0d91}|src\Feature\Demo\code\Sitecore.Feature.Demo\Sitecore.Feature.Demo\Sitecore.Feature.Demo.csproj">
+      <SourceWebPhysicalPath>..\..\..\..\Feature\Demo\code\Sitecore.Feature.Demo\Sitecore.Feature.Demo</SourceWebPhysicalPath>
+      <SourceWebVirtualPath>/Sitecore.Feature.Demo.csproj</SourceWebVirtualPath>
+      <SourceWebProjectId>3257fd99-c0e6-453f-ba3b-a78a3cab0d91</SourceWebProjectId>
+    </SourceWebProjects>
+    <SourceWebProjects Include="{366148b7-2392-4f42-80d6-786b7a3682ae}|src\Foundation\DependencyInjection\code\Sitecore.Foundation.DependencyInjection.csproj">
+      <SourceWebPhysicalPath>..\..\..\..\Foundation\DependencyInjection\code</SourceWebPhysicalPath>
+      <SourceWebVirtualPath>/Sitecore.Foundation.DependencyInjection.csproj</SourceWebVirtualPath>
+      <SourceWebProjectId>366148b7-2392-4f42-80d6-786b7a3682ae</SourceWebProjectId>
+    </SourceWebProjects>
+    <SourceWebProjects Include="{7e46ff93-ee05-412c-ac47-2a59a13da73c}|src\Foundation\Assets\code\Sitecore.Foundation.Assets.csproj">
+      <SourceWebPhysicalPath>..\..\..\..\Foundation\Assets\code</SourceWebPhysicalPath>
+      <SourceWebVirtualPath>/Sitecore.Foundation.Assets.csproj</SourceWebVirtualPath>
+      <SourceWebProjectId>7e46ff93-ee05-412c-ac47-2a59a13da73c</SourceWebProjectId>
+    </SourceWebProjects>
+    <SourceWebProjects Include="{b535703f-8d07-4f23-a533-2974bb4cc7b1}|src\Foundation\SitecoreExtensions\code\Sitecore.Foundation.SitecoreExtensions.csproj">
+      <SourceWebPhysicalPath>..\..\..\..\Foundation\SitecoreExtensions\code</SourceWebPhysicalPath>
+      <SourceWebVirtualPath>/Sitecore.Foundation.SitecoreExtensions.csproj</SourceWebVirtualPath>
+      <SourceWebProjectId>b535703f-8d07-4f23-a533-2974bb4cc7b1</SourceWebProjectId>
+    </SourceWebProjects>
+    <SourceWebProjects Include="{c98ead78-4d83-4789-a621-6011c3d7314d}|src\Project\Common\code\Sitecore.Common.Website.csproj">
+      <SourceWebPhysicalPath>..\..\code</SourceWebPhysicalPath>
+      <SourceWebVirtualPath>/Sitecore.Common.Website.csproj</SourceWebVirtualPath>
+      <SourceWebProjectId>c98ead78-4d83-4789-a621-6011c3d7314d</SourceWebProjectId>
+    </SourceWebProjects>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Feature\Demo\code\Sitecore.Feature.Demo\Sitecore.Feature.Demo\Sitecore.Feature.Demo.csproj">
+      <Project>{3257fd99-c0e6-453f-ba3b-a78a3cab0d91}</Project>
+      <Name>Sitecore.Feature.Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Foundation\Assets\code\Sitecore.Foundation.Assets.csproj">
+      <Project>{7e46ff93-ee05-412c-ac47-2a59a13da73c}</Project>
+      <Name>Sitecore.Foundation.Assets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Foundation\DependencyInjection\code\Sitecore.Foundation.DependencyInjection.csproj">
+      <Project>{366148b7-2392-4f42-80d6-786b7a3682ae}</Project>
+      <Name>Sitecore.Foundation.DependencyInjection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Foundation\SitecoreExtensions\code\Sitecore.Foundation.SitecoreExtensions.csproj">
+      <Project>{b535703f-8d07-4f23-a533-2974bb4cc7b1}</Project>
+      <Name>Sitecore.Foundation.SitecoreExtensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\code\Sitecore.Common.Website.csproj">
+      <Project>{c98ead78-4d83-4789-a621-6011c3d7314d}</Project>
+      <Name>Sitecore.Common.Website</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
+</Project>

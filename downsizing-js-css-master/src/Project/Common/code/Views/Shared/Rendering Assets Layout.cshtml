@@ -1,0 +1,25 @@
+﻿@using Sitecore.Mvc;
+@using Sitecore.Mvc.Analytics.Extensions;
+@using Sitecore.Foundation.Assets.Services;
+@using Sitecore.Foundation.Assets.Models;
+
+@model Sitecore.Mvc.Presentation.RenderingModel
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    @RenderAssetsService.Current.RenderScript(ScriptLocation.Head)
+    @RenderAssetsService.Current.RenderStyles()
+    <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
+    @Html.Sitecore().VisitorIdentification()
+</head>
+<body>
+    <h1>@Html.Sitecore().Field("title")</h1>
+    <div>
+        @Html.Sitecore().Placeholder("main")
+    </div>
+    @RenderAssetsService.Current.RenderScript(ScriptLocation.Body)
+
+</body>
+</html>
+
