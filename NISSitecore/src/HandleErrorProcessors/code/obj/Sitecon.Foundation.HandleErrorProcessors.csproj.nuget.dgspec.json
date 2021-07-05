@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\projects\\Sitecon\\src\\Foundation\\HandleErrorProcessors\\code\\Sitecon.Foundation.HandleErrorProcessors.csproj": {}
+  },
+  "projects": {
+    "C:\\projects\\Sitecon\\src\\Foundation\\HandleErrorProcessors\\code\\Sitecon.Foundation.HandleErrorProcessors.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\Sitecon\\src\\Foundation\\HandleErrorProcessors\\code\\Sitecon.Foundation.HandleErrorProcessors.csproj",
+        "projectName": "Sitecon.Foundation.HandleErrorProcessors",
+        "projectPath": "C:\\projects\\Sitecon\\src\\Foundation\\HandleErrorProcessors\\code\\Sitecon.Foundation.HandleErrorProcessors.csproj",
+        "packagesPath": "C:\\Users\\amitkumarp\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\Sitecon\\src\\Foundation\\HandleErrorProcessors\\code\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\projects\\Sitecon\\NuGet.Config",
+          "C:\\Users\\amitkumarp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\projects\\Sitecon\\build\\nugets": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sitecore.myget.org/F/sc-packages/api/v3/index.json": {},
+          "https://sitecore.myget.org/F/sc-packages/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "dependencies": {
+            "Microsoft.Net.Compilers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "Sitecore.Kernel": {
+              "target": "Package",
+              "version": "[9.3.0, 9.3.0]"
+            },
+            "Sitecore.Mvc": {
+              "target": "Package",
+              "version": "[9.3.0, 9.3.0]"
+            },
+            "Sitecore.Mvc.Analytics": {
+              "target": "Package",
+              "version": "[9.3.0, 9.3.0]"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

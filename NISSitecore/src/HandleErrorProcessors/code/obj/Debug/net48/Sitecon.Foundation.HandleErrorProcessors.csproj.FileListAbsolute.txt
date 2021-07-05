@@ -1,0 +1,9 @@
+C:\projects\Sitecon\bin\website\Debug\Sitecon.Foundation.HandleErrorProcessors.dll.config
+C:\projects\Sitecon\bin\website\Debug\Sitecon.Foundation.HandleErrorProcessors.dll
+C:\projects\Sitecon\bin\website\Debug\Sitecon.Foundation.HandleErrorProcessors.pdb
+c:\projects\sitecon\src\Foundation\HandleErrorProcessors\code\obj\Debug\net48\Sitecon.Foundation.HandleErrorProcessors.AssemblyInfoInputs.cache
+c:\projects\sitecon\src\Foundation\HandleErrorProcessors\code\obj\Debug\net48\Sitecon.Foundation.HandleErrorProcessors.AssemblyInfo.cs
+c:\projects\sitecon\src\Foundation\HandleErrorProcessors\code\obj\Debug\net48\Sitecon.Foundation.HandleErrorProcessors.csproj.CoreCompileInputs.cache
+c:\projects\sitecon\src\Foundation\HandleErrorProcessors\code\obj\Debug\net48\Sitecon.Foundation.HandleErrorProcessors.dll
+c:\projects\sitecon\src\Foundation\HandleErrorProcessors\code\obj\Debug\net48\Sitecon.Foundation.HandleErrorProcessors.pdb
+C:\projects\Sitecon\src\Foundation\HandleErrorProcessors\code\obj\Debug\net48\Sitecon.Foundation.HandleErrorProcessors.csprojAssemblyReference.cache
